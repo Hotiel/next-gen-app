@@ -11,7 +11,7 @@ export function Feed () {
     
         const fetchPosts = async () => {
             try {
-                const res = await fetch( 'https://next-gen-app.onrender.com/api/getAllPosts', {
+                const res = await fetch( `${import.meta.env.VITE_API_URL}/api/getAllPosts`, {
                     credentials: "include",
                 });
                 const data = await res.json();
