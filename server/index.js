@@ -22,7 +22,10 @@ app.use(cookieParser());
 app.use(helmet());
 
 app.use(cors({
-    origin: "http://localhost:5173", 
+    origin: [
+        "http://localhost:5173",
+        "https://next-gen-app.onrender.com"
+    ],
     credentials: true
 }));
 
@@ -42,6 +45,11 @@ app.get('/api/games', async (req, res) => {
         console.error('Error al cargar gamesDataDB desde Mongo:', error);
         res.status(500).json({message: 'error al obtener gamesDataDB'});
     }
+});
+
+app.get("/api/test", (req, res) => {
+    console.log("Ping recibido");
+    res.json({ ok: true, message: "Backend vivo y conectado" });
 });
 
 app.get('/api/players', async (req, res) => {
