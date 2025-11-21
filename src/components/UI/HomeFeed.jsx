@@ -13,7 +13,7 @@ const HomeFeed = () => {
 
     const fetchPost = async () => {
         try {
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/getAllPosts`, {
+            const res = await fetch(`https://api.nextgenrol.com.ar/api/getAllPosts`, {
                 credentials: "include",
             });
             const data = await res.json();
