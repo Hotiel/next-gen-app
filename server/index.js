@@ -25,7 +25,7 @@ app.use(cors({
     origin: [
         "http://localhost:5173",
         "https://next-gen-app.onrender.com",
-        "https://next-gen-app-front.vercel.app"
+        "https://vercel.com/leonardo-polidoris-projects/next-gen-app"
     ],
     credentials: true
 }));
