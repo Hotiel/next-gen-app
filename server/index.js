@@ -24,7 +24,8 @@ app.use(helmet());
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        "https://www.nextgenrol.com.ar"
+        "https://www.nextgenrol.com.ar",
+        "https://nextgenrol.com.ar"
     ],
     credentials: true
 }));
