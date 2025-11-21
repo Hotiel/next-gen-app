@@ -9,7 +9,7 @@ export const verifyUser = (req, res) => {
     try {
         const decoded = jwt.verify(
             token,
-            process.env.JWT_SECRET || "Cada_vez_que_pienso_y_me_doy_cuenta_donde_estoy_entiendo_menos"
+            process.env.JWT_SECRET,
         );
 
         res.status(200).json({
