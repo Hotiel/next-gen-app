@@ -1,7 +1,8 @@
 export const logoutUser = (req, res) => {
     res.clearCookie("token", {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+        // secure: process.env.NODE_ENV === "production",
+        secure: true,
         sameSite: "none",
         domain: ".nextgenrol.com.ar",
         
