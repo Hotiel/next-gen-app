@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         const checkAuth = async () => {
             try {
-                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/me`, {
+                const res = await fetch(`https://api.nextgenrol.com.ar/api/me`, {
                     credentials: "include",
                 });
                 if (res.ok) {
