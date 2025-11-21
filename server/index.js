@@ -16,12 +16,7 @@ connectDB()
 const app = express();
 
 app.use(cors({
-    origin: [
-        "http://localhost:5173",
-        "https://www.nextgenrol.com.ar",
-        "https://nextgenrol.com.ar",
-        "https://.nextgenrol.com.ar"
-    ],
+    origin: "*",
     credentials: true
 }));
 
