@@ -10,7 +10,7 @@ export function Table() {
     useEffect(() => {
         async function fletchData() {
             try {
-                const resGames = await fetch(`${import.meta.env.VITE_API_URL}/api/games`);
+                const resGames = await fetch(`${import.meta.env.VITE_API_URL}/api/games`, {credentials: 'include'});
                 const games = await resGames.json();
                 
                 const tabla = await generarTablaFinal();
