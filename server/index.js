@@ -14,6 +14,17 @@ dotenv.config();
 connectDB()
 
 const app = express();
+
+app.use(cors({
+    origin: [
+        "http://localhost:5173",
+        "https://www.nextgenrol.com.ar",
+        "https://nextgenrol.com.ar",
+        "https://.nextgenrol.com.ar"
+    ],
+    credentials: true
+}));
+
 const PORT = 3001;
 const DATA_PATH = './data.json';
 
@@ -21,14 +32,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(helmet());
 
-app.use(cors({
-    origin: [
-        "http://localhost:5173",
-        "https://www.nextgenrol.com.ar",
-        "https://nextgenrol.com.ar"
-    ],
-    credentials: true
-}));
+
 
 
 // Llamadas ------------
