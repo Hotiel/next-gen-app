@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] =useState(null);
 
     const login = async (usuario, password) => {
-        const res = await fetch("http://localhost:3001/api/login", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/login`, {
             method : "POST",
             headers : {"Content-type": "application/json" },
             body: JSON.stringify({usuario, password}),
@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         const checkAuth = async () => {
             try {
-                const res = await fetch("http://localhost:3001/api/me", {
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/me`, {
                     credentials: "include",
                 });
                 if (res.ok) {

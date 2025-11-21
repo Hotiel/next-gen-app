@@ -10,7 +10,7 @@ export function Profile() {
     const isGuest = user?.role == "guest";
 
     const fetchUserInfo = async () => {
-            const res = await fetch("http://localhost:3001/api/getUserInfo", { credentials: "include" });
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/getUserInfo`, { credentials: "include" });
             const data = await res.json();
             setUserInfo(data);
     };

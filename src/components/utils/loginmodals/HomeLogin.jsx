@@ -29,7 +29,7 @@ const HomeLogin = () => {
     };
     
     const logout = async () => {
-        await fetch("http://localhost:3001/api/logout", {
+        await fetch(`${import.meta.env.VITE_API_URL}/api/logout`, {
             method: "POST",
             credentials: "include"
         });

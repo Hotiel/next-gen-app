@@ -1,7 +1,7 @@
      // ✅ Crear Post
 export const handleCreatePost = async (postContent) => {
     try {
-        const res = await fetch("http://localhost:3001/api/newPost", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/newPost`, {
             method: "POST",
             credentials: "include",
             headers: {
@@ -25,7 +25,7 @@ export const handleComment = async (postId, commentContent) => {
     if (!postId) return;
         try {
             const res = await fetch(
-                `http://localhost:3001/api/${postId}/addComment`,
+                `${import.meta.env.VITE_API_URL}/api/${postId}/addComment`,
             {
             method: "POST",
             credentials: "include",
@@ -40,7 +40,7 @@ export const handleComment = async (postId, commentContent) => {
 
     const data = await res.json();
     if (!res.ok) throw new Error(data.message);
-    const refresh = await fetch(`http://localhost:3001/api/post/${postId}`, {
+    const refresh = await fetch(`${import.meta.env.VITE_API_URL}/api/post/${postId}`, {
         credentials: "include",
     });
     const updatedPost = await refresh.json();
@@ -56,7 +56,7 @@ export const handleUpvote = async (postId) => {
     if (!postId) return setMessage("Falta el ID del post");
         try {
             const res = await fetch(
-                `http://localhost:3001/api/${postId}/upvote`,
+                `${import.meta.env.VITE_API_URL}/api/${postId}/upvote`,
             {
                 method: "POST",
                 credentials: "include",
@@ -67,7 +67,7 @@ export const handleUpvote = async (postId) => {
     if (!res.ok) throw new Error(data.message);
     const upVoteState = data.upvotedBefore;
     
-    const refresh = await fetch(`http://localhost:3001/api/post/${postId}`, {
+    const refresh = await fetch(`${import.meta.env.VITE_API_URL}/api/post/${postId}`, {
         credentials: "include",
     });
     const updatedPost = await refresh.json();

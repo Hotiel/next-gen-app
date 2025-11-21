@@ -1,7 +1,7 @@
 
 export const handleUpdateUserName = async (newName) => {
     try {
-        const res = await fetch("http://localhost:3001/api/updateUserName", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/updateUserName`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             credentials: "include",
@@ -15,7 +15,7 @@ export const handleUpdateUserName = async (newName) => {
 
 export const handleUpdatePassword = async ({ oldPassword, newPassword, newPasswordCheck }) => {
     try {
-        const res = await fetch("http://localhost:3001/api/updatePassword", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/updatePassword`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             credentials: "include",
@@ -33,7 +33,7 @@ export const handleUpdateProfilePicture = async (image) => {
     formData.append("image", image);
 
     try {
-        const res = await fetch("http://localhost:3001/api/updateProfilePicture", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/updateProfilePicture`, {
             method: "PUT",
             credentials: "include",
             body: formData,

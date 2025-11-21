@@ -15,8 +15,8 @@ export function TournamentFlow(){
         async function fetchData() {
             try {
                 const [resPlayers, resGames] = await Promise.all([
-                    fetch('http://localhost:3001/api/players'),
-                    fetch('http://localhost:3001/api/games')
+                    fetch(`${import.meta.env.VITE_API_URL}/api/players`),
+                    fetch(`${import.meta.env.VITE_API_URL}/api/games`)
                 ]);
 
                 const playersData = await resPlayers.json();
