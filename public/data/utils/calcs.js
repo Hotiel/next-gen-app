@@ -4,10 +4,10 @@ import { arrayToGamesObject } from "./transformGamesArray";
 
 export async function generarTablaFinal() {
 
-    const resPlayers = await fetch('http://localhost:3001/api/players');
+    const resPlayers = await fetch(`${import.meta.env.VITE_API_URL}/api/players`);
     const storedPlayers = await resPlayers.json();
 
-    const resGames = await fetch('http://localhost:3001/api/games');
+    const resGames = await fetch(`${import.meta.env.VITE_API_URL}/api/games`);
     const rareGames = await resGames.json();
     const storedGames = arrayToGamesObject(rareGames)
 
