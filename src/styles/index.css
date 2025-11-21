@@ -1,0 +1,98 @@
+@import url(utils.css);
+@import url(home.css);
+@import url(navBar.Css);
+@import url(table.css);
+@import url(fixture.css);
+@import url(glitchButton.css);
+@import url(postCard.css);
+@import url(feed.css);
+@import url(profile.css);
+@import url(loginModal.css);
+@import url(responsive.css);
+@import url(footer.css);
+
+:root {
+    /* ==== BASE COLORS ==== */
+    --color-bg: #040404;       /* Fondo general (casi negro) */
+    --color-surface: #202f57;  /* Cajas, navbar o paneles */
+    --color-muted: #455fac;    /* Textos secundarios o bordes sutiles */
+       /* ==== ACCENT COLORS ==== */
+    --color-accent-pink: #d82ee2;
+    --color-accent-cyan: #16beee;
+    --color-accent-blue: #867cf3;
+    --color-accent-deep: #590f58;
+    --color-accent-teal: #045764;
+       /* ==== GRADIENTS ==== */
+    --gradient-main: linear-gradient(0deg, var(--color-accent-pink), var(--color-accent-cyan));
+    --gradient-alt: linear-gradient(135deg, var(--color-accent-deep), var(--color-accent-teal));
+       /* ==== NEON EFFECTS ==== */
+    --shadow-neon: 0 0 10px -2px var(--color-accent-cyan), 0 0 15px -5px var(--color-accent-pink);
+    --shadow-neon-strong: 0 0 20px var(--color-accent-cyan), 0 0 40px var(--color-accent-pink);
+}
+
+* {
+    backdrop-filter: inherit !important;
+}
+
+html {
+    overflow-x: hidden;
+
+}
+nav {
+    max-height: 80px;
+}
+body {
+    background-color: var(--color-bg);
+
+}
+
+h1, h2 {
+    font-family: 'oneup', 'Orbitron', sans-serif !important ;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h3, h4, h5, h6 {
+    font-family: 'oneup', 'Orbitron', sans-serif !important ;
+}
+.main-container {
+    margin: 0;
+}
+.border-neon {
+    border-image: var(--gradient-main) 1 !important;
+}
+
+.d-none {
+    display: none !important;
+}
+.main-container {
+    z-index: 0;
+}
+.container {
+    background-color: transparent !important;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+.guest-p {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    color: #a7acb1;
+    text-shadow: 0 0 3px #000;
+}
+/*
+@media screen and (min-width: 990px) {
+    
+.logobarra {
+    object-fit: cover;
+    max-width:200px; 
+    max-height:200px;
+    margin: 0;
+    padding: 0;
+    filter: drop-shadow(3px 3px 5px #000000);
+}
+}
+
+AL VOLVER TRABAJAR CON ESTO*/
+

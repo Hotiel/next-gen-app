@@ -1,0 +1,38 @@
+
+
+@font-face {
+    font-family: 'oneup';
+    src: url('./fonts/1up.ttf') format('TrueType');
+    src: url('./fonts/1up.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+    }
+    20%, 24%, 55% {
+    opacity: 0.4;
+    }
+}
+@keyframes fadein {
+    from {opacity: 0%}
+    to {opacity: 100%}
+}
+@keyframes fadeout {
+    from {opacity: 100%}
+    to {opacity: 0%}
+}
+@keyframes neonMove {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+@keyframes live-shadow {
+    0%, 100% {
+        box-shadow: 0 0 15px var(--color-accent-cyan)
+    }
+    50% {
+        box-shadow: 0 0 15px var(--color-accent-pink)
+    }
+}

@@ -1,0 +1,76 @@
+
+.feed-window {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 75dvw;
+    align-items: center;
+}
+
+.feed-window h2{ margin: 1rem; }
+
+.tapar-feed { 
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px var(--color-bg);
+}    
+
+.feed-container {
+    margin: auto;
+    max-width: 80%;
+    min-width: 50dvw;
+    justify-items: center;
+}
+
+.feed-window p:not(.coment--cardBody) {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.feed-window .post-card {
+    max-width: 75%;
+    margin: 1rem 0rem;
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+}
+.feed-window .post-body {
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+}
+
+
+.postcreator-container {
+    padding: 0.5rem;
+    width: 40dvw;
+    max-width: 40dvw;
+}
+
+.create-post-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
+}
+
+.create-post-box input {
+    margin: 1rem 0 0.5rem 0;
+    background-color: #212529;
+    color: #a7acb1;
+    font-size: 0.9rem;
+    outline: none;
+    border: 1px solid var(--color-bg);
+    border-radius: 8px;
+    width: 100%;
+    min-height: 15dvh;
+    transition: all 0.5s ease-out;
+    text-align: center;
+    animation: live-shadow 4s ease-in-out alternate-reverse infinite;
+}
+
+.create-post-box button {
+    border-radius: 8px;
+    max-width: 25%;
+    margin-top: 0.5rem;
+    background-color: #212529;
+    color: #6edff6aa;
+    align-self: flex-end;
+}

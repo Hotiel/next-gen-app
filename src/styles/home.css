@@ -1,0 +1,175 @@
+.loadingScreen {
+    background-color: #000000;
+    width: 100dvw;
+    height: 100dvh;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loadingLogo {
+    max-width: 600px;
+    filter: drop-shadow(var(--shadow-neon) /* #00ffff*/ );
+    animation: fadein 1s forwards, flicker 2s 1s infinite;
+    transition: 0.5s ease-in all;
+}
+.fadeout {
+    animation: fadeout 1s ease-in forwards;
+}
+
+.podium {
+    background-image: url('../../public/NG.jpg');
+    background-position: center;
+    background-clip: border-box;
+    background-size: cover;
+    border-left: 1px solid var(--color-accent-blue);
+    margin-bottom: 1rem;
+    border-top: none;
+    transition: border-top 1s;
+    }
+
+.podium:hover {
+    border-top: 1px solid var(--color-accent-blue);
+    transform: translateY(-2px);
+    }
+
+.podium-container div:first-child {
+    animation: flicker 2s infinite 4s;
+}
+.podium-container div:nth-child(2) {
+    animation: flicker 5s infinite 2s;
+}
+.podium div:last-child{
+    animation: flicker 0s infinite 0.5s;
+}
+
+.tapar {
+    background-color: #202f5755;
+    width: 99%;
+    height: 99%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.tapar p {
+    margin: 0;
+    text-shadow: 1px 1px 5px #000000;
+}
+
+.login-form-home {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+}
+
+.login-form-home input {
+    margin: 0.3rem;
+    background-color: #212529;
+    border-image: var(--gradient-main) 5;
+    color: #6edff6;
+    outline: none;
+}
+
+.login-form-home input::placeholder {
+    color: #6edff633;
+}
+
+.login-form-home button {
+    border-radius: 8px;
+    max-width: 75%;
+    margin-top: 0.5rem;
+    background-color: #212529;
+    color: #6edff6aa;
+}
+
+
+.home-feed-item{
+    flex: 1 1 45%;
+    min-width: 300px;
+    min-height: 50dvh;
+    height: 50dvh;
+    align-content: center;
+}
+
+.home-feed-item:last-child{
+        overflow-y: scroll;
+}
+.home-feed-item:last-child::-webkit-scrollbar{
+        width: 7px;
+}
+.home-feed-item:last-child::-webkit-scrollbar-track{
+        background-color: #202f5755;
+        border-radius: 8px;
+}
+
+.podium-name-hold {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #a7acb1;
+}
+
+/*  
+@media (max-width: 1024px) { ... }
+@media (max-width: 768px) { ... }
+@media (max-width: 480px) { ... } */
+
+.home-feed-item .post-body {
+        min-height: fit-content;
+    }
+    .home-feed-item .post-body p {
+    text-align: left !important; 
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem !important;
+    margin: 0rem;
+    width: 100%;
+    min-height: 100%;
+    white-space: pre-wrap;
+    }
+
+    .home-feed-item .post--comment{
+        min-width: 90%;
+    }
+
+
+    .home-feed-item .comment-usercont {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        padding: 0rem;
+        margin-top: 0.5rem;
+        border-bottom: 1px solid #111119;
+    }
+    .home-feed-item .comment-usercont .post--userimagecontainer {
+        max-width: 50%;
+    }
+    .home-feed-item .comment-usercont .post--userimagecontainer img{
+        max-width: 30%;
+        aspect-ratio: 1/1;
+    }
+    .home-feed-item .coment--cardUsername{
+        font-size: 0.9rem;
+    }
+    .home-feed-item .coment--cardBody{
+        margin: 0.5rem;
+        margin-top: 1rem;
+        text-align: left;
+    }
+    .home-feed-item .coment--cardDate{
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .post-upvote {
+        margin: 0;
+        gap: 0;
+        padding: 0;
+    }

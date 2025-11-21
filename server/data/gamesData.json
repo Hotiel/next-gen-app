@@ -1,0 +1,22 @@
+{
+  "general": {
+    "totalGames": 0,
+    "ultimoTorneo": null
+  },
+  "pes": {
+    "totalGames": 0,
+    "ultimoTorneo": null
+  },
+  "patojuego": {
+    "totalGames": 0,
+    "ultimoTorneo": null
+  },
+  "padel": {
+    "totalGames": 0,
+    "ultimoTorneo": null
+  },
+  "otros": {
+    "totalGames": 0,
+    "ultimoTorneo": null
+  }
+}

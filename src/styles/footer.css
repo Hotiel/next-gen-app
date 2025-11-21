@@ -1,0 +1,158 @@
+
+@media screen and (min-width: 1024px) {
+
+.footer-container {
+    position: relative;
+    min-height: 30dvh;
+
+    margin-bottom: 0;
+    align-items: center;
+    justify-items: center;
+    margin-top: 10dvh;
+    overflow: hidden;
+}
+
+.footer-card {
+    padding-top: 3rem;
+    color: #fff;
+    width: 95%;
+    cursor: cell;
+    border-radius: 4px;
+    background-color: #202f5755;
+}
+
+.leonardo {
+    margin: 2rem;
+    text-align: center;
+    overflow: visible;
+    position: relative;
+}
+
+.leonardo1 {
+    position: relative;
+    font-size: 4rem;
+    animation: flicker 2s infinite linear;
+    z-index: 9;
+    transition: 0.8s ease all;
+}
+
+.footer-container::before {
+    content: "Leonardo Polidori";
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    font-size: 10rem;
+    color: #00000077;
+
+    opacity: 0;
+    filter: blur(10px);
+
+    transition: 0.7s ease all;
+    pointer-events: none;
+}
+
+.page-info {
+    color: #a7acb1;
+    justify-items: end;
+    font-size: 0.8rem;
+    z-index: 10;
+}
+.page-info-card {
+    position: relative;
+    margin-right: 1rem;
+    padding: 0.2rem;
+    padding-bottom: 1rem;
+}
+
+.page-info p {
+    margin: 0;
+}
+.page-info p:first-child {
+    color: #c0c0c0;
+    font-size: 0.9rem;
+}
+.page-info p:nth-child(2){
+    margin-left: 1rem;
+    color: #a7acb1;
+    font-size: 0.7rem;
+}
+.page-info p:nth-child(3){
+    margin-left: 1rem;
+    color: #777c71;
+    font-size: 0.6rem;
+}
+
+
+.page-extra {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 20%;
+    z-index: 10;
+}
+
+.vertical-footer-links li{
+    list-style-type: "";
+    margin: 0.5rem;
+    transition: 0.5s ease all;
+    font-size: 0.8rem;
+    filter: blur(2px);
+    color: #a7acb1;
+}
+.vertical-footer-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s ease all;
+}
+
+.footer-container:hover .leonardo1 {
+    filter: blur(12px);
+    opacity: 0.9;
+    color: #a7acb1;
+    animation: none;
+}
+
+.footer-container:hover::before {
+    opacity: 1;
+    filter: blur(0);
+    animation: flicker 3s forwards 2s;
+}
+
+.footer-container:hover .vertical-footer-links li{
+    list-style-type: " —— ";
+    margin: 1.2rem;
+    font-size: 1rem;
+    filter: blur(0);
+    color: #fff;
+}
+.vertical-footer-links li:nth-child(1) a:hover {
+    background: linear-gradient(to bottom, #bbd2c5, #536976, #373d5e);
+    background-clip: text;
+    color: transparent;
+}
+.vertical-footer-links li:nth-child(2) a:hover {
+    background: linear-gradient(45deg, #0077b5, #00a0dc);
+    background-clip: text;
+    color: transparent;
+}
+
+.vertical-footer-links li:nth-child(3) a:hover {
+    background: linear-gradient(to right,#833ab4,#fd1d1d,#fcb045);
+    background-clip: text;
+    color: transparent;
+}
+.vertical-footer-links li:nth-child(4) a:hover {
+    background: var(--gradient-main);
+    background-clip: text;
+    color: transparent;
+}
+
+.vertical-footer-links a:active {
+    filter: brightness(1.2);
+}
+
+    
+}

@@ -1,0 +1,231 @@
+/* iphone12*/
+@media screen and (max-width: 480px) { 
+
+    /*--- HOME ---*/
+    .home-feed-item {
+        overflow: hidden;
+        max-width: 100%;
+    }
+    .home-table-wrapper {
+        max-width: 100% !important;
+    }
+    .home-feed-item .post-section{
+        min-width: 100%;
+    }
+    .home-feed-item .post-card {
+        min-width: 100%;
+    }
+    .home-feed-item:last-child::-webkit-scrollbar-track{
+        display: none;;
+    }
+
+    /*--- LOGIN ---*/
+    .login-modal-container {
+        max-width: 95%;
+        width: 90%;
+    }
+    /*--- LOGIN ---*/
+    .feed-window {
+        min-width: 95%;
+    }
+    .feed-container {
+        min-width: 100%;
+    }
+    .feed-container .post-body{
+        min-height: fit-content;
+    }
+    .feed-container .post-body p {
+        white-space: pre-wrap;
+        margin: 0.5rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .feed-window h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    }
+    .tapar-feed {
+        width: 100%;
+        min-height: 35dvh;
+    }
+    .postcreator-container {
+        max-width: 100%;
+        width: 100%;
+    }
+    .postcreator-container button {
+        min-width: 40%;
+    }
+    .feed-container .post-card{
+        min-width: 100%;
+    }
+    
+    .user-card{
+    width: 100%;
+}
+    .user-profilepicturecontainer {
+    min-width: 100%;
+    text-align: center;
+}
+.user-profilepicturecontainer img {
+    max-width: 70%;
+}
+.user-editor{
+    max-width: 80%;
+    width: 80%;
+    font-size: 0.9rem;
+}
+.user-updater-form-container h5{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    margin: 0;
+}
+.user-updater-form-container{
+    min-width: 100%;
+    width: 100%;
+}
+.user-updater-form-container form{
+    min-width: 100%;
+    width: 100%;
+}
+.user-updater-form-container form button{
+    min-width: 40%;
+    width: 70%;
+    font-size: 0.8rem;
+} 
+.profile-image-overlay{
+    opacity: 1;
+}
+.user-updater-form-container form label{
+    font-size: 0.9rem;
+}
+
+
+} 
+
+@media screen and (max-width: 1024px) { 
+    .post-body p {
+    margin-left: 0 !important; 
+    }
+    .panel-closer {
+    width: 2rem;
+    height: 2.1rem;
+    margin: auto;
+    background-color: #fffa;
+    color: #000;
+    text-shadow: none;
+    font-size: 1.3rem;
+    box-shadow: 0 0 7px 0 #000;
+    top: 6dvh;
+    left: 90dvw;
+}
+/* FOOOOOOOOOTER */
+.footer-container {
+    width: 100%;
+    min-height: 30dvh;
+    margin-bottom: 0;
+    align-items: center;
+    justify-items: center;
+    margin-top: 5rem;
+    overflow: hidden;
+}
+
+.footer-card {
+    padding-top: 2rem;
+    color: #fff;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #202f5755;
+}
+
+.leonardo {
+    margin: 2rem;
+    text-align: center;
+}
+
+.leonardo1 {
+    font-size: 2rem;
+    animation: flicker 2s infinite linear;
+    text-shadow: 0 0 5px #000000;
+}
+
+.page-info {
+    color: #a7acb1;
+    justify-items: center;
+}
+.page-info-card {
+    text-align: center;
+    padding: 0.2rem;
+    padding-bottom: 1rem;
+}
+
+.page-info p {
+    margin-bottom: 0.3rem;
+}
+.page-info p:first-child {
+    color: #c0c0c0;
+    font-size: 0.9rem;
+}
+.page-info p:nth-child(2){
+    color: #a7acb1;
+    font-size: 0.7rem;
+}
+.page-info p:nth-child(3){
+    color: #777c71;
+    font-size: 0.6rem;
+}
+
+
+.page-extra {
+    width: 100%;
+    text-align: center;
+}
+.vertical-footer-links ul {
+    display: grid;
+    width: 100%;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr 1fr;
+    padding: 0;
+}
+.vertical-footer-links li{
+    list-style-type: none;
+    margin: 0.5rem;
+}
+.vertical-footer-links a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 0 5px #00000077;
+}
+
+
+.vertical-footer-links li:nth-child(1) a {
+    background: linear-gradient(to bottom, #bbd2c5, #536976, #373d5e);
+    background-clip: text;
+    color: transparent;
+}
+.vertical-footer-links li:nth-child(2) a {
+    background: linear-gradient(45deg, #0077b5, #00a0dc);
+    background-clip: text;
+    color: transparent;
+}
+
+.vertical-footer-links li:nth-child(3) a {
+    background: linear-gradient(to right,#833ab4,#fd1d1d,#fcb045);
+    background-clip: text;
+    color: transparent;
+}
+.vertical-footer-links li:nth-child(4) a {
+    background: var(--gradient-main);
+    background-clip: text;
+    color: transparent;
+}
+
+.vertical-footer-links a:active {
+    filter: brightness(1.2);
+}
+
+
+
+}
+
