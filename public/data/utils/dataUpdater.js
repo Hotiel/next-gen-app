@@ -2,19 +2,11 @@ import { arrayToGamesObject } from "./transformGamesArray";
 
 export async function updatePlayerStats (tournamentSummary) {
 
-    const resGames = await fetch(`${import.meta.env.VITE_API_URL}/api/games`, {
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({updatedGamesData, updatedPlayers}),
-        credentials: 'include',
-    });
+    const resGames = await fetch(`${import.meta.env.VITE_API_URL}/api/games`);
     const unsortedGamesData = await resGames.json()
     const gamesData = await arrayToGamesObject(unsortedGamesData)
 
-    const resPlayers = await fetch(`${import.meta.env.VITE_API_URL}/api/players`, {
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({updatedGamesData, updatedPlayers}),
-        credentials: 'include',
-    });
+    const resPlayers = await fetch(`${import.meta.env.VITE_API_URL}/api/players`);
     const players = await resPlayers.json()
 
     const updatedGamesData = { ...gamesData };

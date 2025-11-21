@@ -35,7 +35,6 @@ export const loginUser = async (req, res) => {
             // secure: process.env.NODE_ENV === "production",
             secure: true,
             sameSite: "none",
-            domain: ".nextgenrol.com.ar",
             maxAge: 10 * 60 * 60 * 1000,
         });
 

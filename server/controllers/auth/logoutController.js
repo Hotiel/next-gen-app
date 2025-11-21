@@ -4,7 +4,6 @@ export const logoutUser = (req, res) => {
         // secure: process.env.NODE_ENV === "production",
         secure: true,
         sameSite: "none",
-        domain: ".nextgenrol.com.ar",
         
     });
     return res.json({message: "Logout exitoso"});
