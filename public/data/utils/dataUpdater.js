@@ -2,11 +2,19 @@ import { arrayToGamesObject } from "./transformGamesArray";
 
 export async function updatePlayerStats (tournamentSummary) {
 
-    const resGames = await fetch(`${import.meta.env.VITE_API_URL}/api/games`);
+    const resGames = await fetch(`${import.meta.env.VITE_API_URL}/api/games`, {
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({updatedGamesData, updatedPlayers}),
+        credentials: 'include',
+    });
     const unsortedGamesData = await resGames.json()
     const gamesData = await arrayToGamesObject(unsortedGamesData)
 
-    const resPlayers = await fetch(`${import.meta.env.VITE_API_URL}/api/players`);
+    const resPlayers = await fetch(`${import.meta.env.VITE_API_URL}/api/players`, {
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({updatedGamesData, updatedPlayers}),
+        credentials: 'include',
+    });
     const players = await resPlayers.json()
 
     const updatedGamesData = { ...gamesData };
@@ -39,7 +47,8 @@ export async function updatePlayerStats (tournamentSummary) {
     await fetch(`${import.meta.env.VITE_API_URL}/api/guardar-jornada`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({updatedGamesData, updatedPlayers})
+        body: JSON.stringify({updatedGamesData, updatedPlayers}),
+        credentials: 'include',
     });
 
 }
